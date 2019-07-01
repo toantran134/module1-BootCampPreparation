@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h3>TÍNH DIỆN TÍCH VÀ CHU VI HÌNH TRÒN - THỂ TÍCH HÌNH CẦU</h3>
+        <b>Nhập giá trị bán kính hình tròn</b>    <input type="number" id="r">
+        <button type="reset" onclick="tinhtoan()">Ấn vào đây để ra Kết quả</button><br><br>
+    <table border="5">
+        <tr>
+        <td><b>Chu vi hình tròn là</b></td>
+        <td><input type="text" id="cV" disabled></td>  
+        </tr>
+        <tr>
+        <td><b>Diện tích hình tròn là</b></td>
+        <td><input type="text" id="dT" disabled></td>  
+        </tr>
+        <tr>
+        <td><b>Thể tích hình cầu là</b></td>
+        <td><input type="text" id="tT" disabled></td>  
+        </tr>
+    </table>
+    <script>
+        function tinhtoan(){
+            let r = parseFloat(document.getElementById("r").value);
+            if (r < 0) {
+            alert("Không tồn tại hình tròn");
+            } else {
+            document.getElementById("cV").value = 2*r*Math.PI;
+            document.getElementById("dT").value = r*r*Math.PI;
+            document.getElementById("tT").value = (4/3)*r*r*r*Math.PI;
+            }
+        }
+    </script>
+    </head>
+</html>

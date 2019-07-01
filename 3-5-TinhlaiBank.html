@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<style>
+    input {
+        width: 500px;
+        height: 50px;
+        font-size: 40px;
+    }
+    button {
+        width: 200px;
+        height: 60px;
+        font-size: 40px;
+        font-weight: bold 
+    }
+    .result {
+        color: blue
+       
+    }
+</style>
+<html style="font-size: 50px">
+    <head>
+        <center> 
+            <h1>TÍNH LÃI SUẤT NGÂN HÀNG</h1>
+        <table>
+            <tr>
+                <td>Số tiền muốn gửi (vay)</td>
+                <td><input type="text" id="money"></td>
+            </tr> 
+            <tr>
+                 <td>Số tháng muốn gửi (vay)</td>
+                 <td><input type="text" id="month"></td>
+            </tr>
+            <tr>
+                 <td>Lãi suất của ngân hàng</td> 
+                 <td><input type="text" id="ls"></td> 
+                 <td><button class="result" onclick="result()">Kết quả</button></td>
+            </tr> 
+            <tr>
+                <td>-------------------------------------</td>
+                <td>-------------------------------</td>
+            </tr>
+            <tr>
+                <td>Số tiền lãi trong tháng hiện tại</td> 
+                <td><input type="number" id="moneyL" disabled></td>
+            </tr>
+            <tr> 
+                <td>Tổng tiền lãi nhận được</td>
+                <td><input type="number" id="moneyT" disabled></td>
+            </tr>
+            <tr>
+                <td>Tiền lãi trung bình hàng tháng</td>
+                <td><input type="number" id="moneyLTB" disabled></td>
+            </tr>
+        </table>
+        <script>
+            function result() {
+                let money = parseFloat(document.getElementById("money").value); 
+                let ls = parseFloat(document.getElementById("ls").value);
+                let month = parseInt(document.getElementById("month").value); 
+                let moneyG;
+                let moneyT; 
+                let moneyLTB;                      
+                let t = (100+ls)/100;
+                    moneyG = money*Math.pow(t, (month-1));
+                    moneyL = moneyG*ls/100;
+                    moneyT = money*Math.pow(t, month)-money;
+                    moneyLTB = moneyT/month;                    
+                document.getElementById("moneyL").value = moneyL;
+                document.getElementById("moneyT").value = moneyT; 
+                document.getElementById("moneyLTB").value = moneyLTB;     
+            }
+        </script> 
+        </center>
+    </head>
+</html>

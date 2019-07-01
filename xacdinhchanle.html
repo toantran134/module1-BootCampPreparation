@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>XÁC ĐỊNH SỐ CHẴN HAY LẺ</h2><br>
+        Nhập vào trong khung 1 số bất kỳ <input type="number" id="number">
+        <button type="button" onclick="number()">Ấn vào đây</button>
+        <script>
+            function number(){
+                var number = document.getElementById("number").value;
+                var du = number%2;
+                if (du!=0) {
+                    alert("Số đã cho là số lẻ");
+                } else {
+                    alert("Số đã cho là số chẵn");
+                }    
+            }
+         </script>
+    </body>
+</html>

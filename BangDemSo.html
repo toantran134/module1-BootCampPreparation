@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<style>
+    #result {
+        font-size: 50px;
+    }
+</style>
+<html><center>
+    <head>
+        <h1>BẢNG ĐẾM SỐ</h1>
+        <input type="button" value="-" onclick="tru()">
+        <input type="number" style="width: 100px;" value="0" id="result" disabled>
+        <input type="button" value="+" onclick="cong()">
+        <script>
+            function tru() {
+                let t = document.getElementById("result").value;
+                document.getElementById("result").value = parseInt(t) - 1;
+            }
+            function cong() {
+                let t = document.getElementById("result").value;
+                document.getElementById("result").value = parseInt(t) + 1;
+            }
+        </script>
+    </head></center>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head><center>
+    <h1>GIẢI PHƯƠNG TRÌNH BẬC 2 MỘT ẨN</h1>
+    <h3>Nhập vào các hệ số của phương trình: ax + b = 0 </h3> 
+    Hệ số a <input type="number" id="a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Hệ số b <input type="number" id="b"> 
+    <button type="button" onclick="GPTbac1()">Ấn để hiện kết quả</button> 
+        <script>
+            function GPTbac1() {
+                var a = parseInt(document.getElementById("a").value);
+                var b = parseInt(document.getElementById("b").value); 
+                if (a == 0)  {
+                    if (b == 0) {
+                        alert("Phương trình vô số nghiệm");
+                    } else {
+                        alert("Phương trình vô nghiệm");
+                    }
+                } else {
+                    let x = -b/a;
+                        alert("Phương trình có nghiệm x= " + x);
+                }
+            }
+        </script>
+
+
+
+
+    <h1>GIẢI PHƯƠNG TRÌNH BẬC 2 MỘT ẨN</h1>
+    <h3>Nhập vào các hệ số của phương trình: ax<sup>2</sup> + bx + c = 0</h3>
+    Hệ số a <input type="number" id="a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Hệ số b <input type="number" id="b">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Hệ số c <input type="number" id="c">
+    <button type="button" onclick="GPTbac2()">Ấn để hiện kết quả</button>
+        <script>
+            function GPTbac2() {
+                var a = parseInt(document.getElementById("a").value);
+                var b = parseInt(document.getElementById("b").value);
+                var c = parseInt(document.getElementById("c").value);
+                if (a == 0) {
+                    if (b == 0) {
+                        if (c == 0) {
+                                    alert("phương trình vô số nghiệm");
+                        } else
+                                    alert("phương trình vô nghiệm");
+                    } else {
+                                var x = - (c / b);
+                                alert("phương trình có nghiệm duy nhất x= " + x);
+                            }
+                } else {
+                    var delta = b * b - 4 * a * c;
+                        if (delta < 0) {
+                                alert("phương trình vô nghiệm");
+                        } else {
+                            if (delta == 0) {
+                                    var x = -b/(2*a);
+                                    alert("phương trình có nghiệm duy nhất x= " + x);
+                            } else {
+                                    var x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                                    var x2 = (-b - Math.sqrt(delta)) / (2 * a);
+                                    alert("phương trình có 2 nghiệm x1=" + x1 + " và x2=" + x2);
+                                }
+                            }
+                        }
+                }
+                </script>
+
+    <h1>GIẢI HỆ PHƯƠNG TRÌNH BẬC NHẤT 2 ẨN</h1>
+       <table> 
+           <tr> 
+                <td><h3>Nhập vào các hệ số của Hệ phương trình:</h3></td>
+                <td><h3><b>a<sub>1</sub>x + b<sub>1</sub>y = c<sub>1</b></h3></td>
+           </tr> 
+           <tr>
+               <td></td>
+               <td><h3><b>a<sub>2</sub>x + b<sub>2</sub>y = c<sub>2</sub></b></h3></td>
+           </tr>
+       </table>
+    Hệ số a1 <input type="number" id="a1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Hệ số b1 <input type="number" id="b1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Hệ số c1 <input type="number" id="c1"><br><br>
+    Hệ số a2 <input type="number" id="a2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Hệ số b2 <input type="number" id="b2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    Hệ số c2 <input type="number" id="c2"><br><br>
+    <button type="button" onclick="hePT2an()">Ấn để hiện kết quả</button>
+    <script>
+        function hePT2an() {
+            var a1 = parseInt(document.getElementById("a1").value);
+            var b1 = parseInt(document.getElementById("b1").value);
+            var c1 = parseInt(document.getElementById("c1").value);
+            var a2 = parseInt(document.getElementById("a2").value);
+            var b2 = parseInt(document.getElementById("b2").value);
+            var c2 = parseInt(document.getElementById("c2").value);
+            var D = a1*b2-a2*b1;
+            var Dx = c1*b2-c2*b1;
+            var Dy = a1*c2-a2*c1;
+            if (D == 0) {
+                if (Dx == 0 && Dy == 0)
+                alert("Hệ phương trình vô số nghiệm");
+                else 
+                alert("Hệ phương trình vô nghiệm");
+            }
+            else {
+                var x = Dx/D;
+                var y = Dy/D;
+                alert("Hệ phương trình có nghiệm x=" + x + " và y=" + y);
+            }
+        }
+    </script></center>
+</head>
+
+</html>

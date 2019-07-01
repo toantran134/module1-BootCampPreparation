@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<style>
+    input {
+        font-size: 30px;
+    }
+
+    button {
+        font-size: 30px;
+    }
+
+    .sb {
+        color: blue
+    }
+</style>
+<html>
+
+<body style="font-size: 30px">
+    <center>
+        <h3>TÌM GIÁ TRỊ LỚN NHẤT VÀ NHỎ NHẤT TRONG 3 SỐ CHO TRƯỚC</h3>
+        <table>
+            <tr>
+                <td>Nhập vào số thứ nhất</td>
+                <td><input type="text" id="a"></td>
+            </tr>
+            <tr>
+                <td>Nhập vào số thứ hai</td>
+                <td><input type="text" id="b"></td>
+            </tr>
+            <tr>
+                <td>Nhập vào số thứ ba</td>
+                <td><input type="text" id="c"></td>
+                <td><button type="button" class="sb" onclick="test()">Submit</button></td>
+            </tr>
+            <tr>
+                <td>--------------------------</td>
+                <td>-------------------------------------</td>
+            </tr>
+            <tr>
+                <td>Số lớn nhất là số</td>
+                <td><input type="text" id="max" disabled></td>
+            </tr>
+            <tr>
+                <td>Số nhỏ nhất là số</td>
+                <td><input type="text" id="min" disabled></td>
+            </tr>
+        </table>
+
+        <script>
+            function test() {
+                var a = parseInt(document.getElementById("a").value);
+                var b = parseInt(document.getElementById("b").value);
+                var c = parseInt(document.getElementById("c").value);
+                if (a == b && b == c) {
+                    document.getElementById("max").value = "Không có số lớn nhất";
+                    document.getElementById("min").value = "Không có số nhỏ nhất";
+                } else {
+                    var max = a;
+                    if (max < b) {
+                        max = b;
+                    }
+                    if (max < c) {
+                        max = c;
+                    }
+                    document.getElementById("max").value = max;
+                    var min = a;
+                    if (min > b) {
+                        min = b;
+                    }
+                    if (min > c) {
+                        min = c
+                    }
+                    document.getElementById("min").value = min;
+                }
+
+
+            }
+
+        </script>
+    </center>
+</body>
+
+</html>

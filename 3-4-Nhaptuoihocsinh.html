@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<style>
+    .result {
+        width: 170px;
+    }
+</style>
+<html>
+    <head>
+        <h1>BT - Nhập số tuổi học sinh vào lớp 10</h1>
+        <table>
+            <tr>
+                <td>Nhập vào số tuổi học sinh: </td>
+                <td><input type="number" style="width: 30px;" id="old"></td>
+            </tr> 
+            <tr>
+                <td><input type="button" value="Kết quả" class="result" onclick="result()"></td> 
+                <td><input type="text" style="width: 200px;" id="result" disabled></td>
+            </tr>
+        </table> 
+        <script>
+            function result() {
+                let old = parseInt(document.getElementById("old").value); 
+                if (old < 15) {
+                    document.getElementById("result").value = "Không đủ độ tuổi vào học lớp 10";
+                } else {
+                    document.getElementById("result").value = "Đạt điều kiện vào học lớp 10";
+                }
+            }
+        </script>
+    </head>
+</html>

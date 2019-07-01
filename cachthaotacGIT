@@ -1,0 +1,23 @@
+clone github
+----------------
+cd /d (Chon o dia luu git)
+
+cd ../ (reset o dia luu git)
+
+ls (de ktra folder)
+
+cd git/ (de clone file tu github)
+
+git clone ...
+--------------------------------------------
+commit
+
+cd /f  (chon o dia luu git)
+
+cd /git (chon toi o luu JS)
+
+ls (ktra folder)
+
+git add. (add toan bo Js len github)
+
+git commit -m "(ghi bat ki)"   (update JS len github)

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <h1>TÍNH TỔNG VÀ ĐIỂM TRUNG BÌNH 3 MÔN HỌC</h1>
+    <h4>Nhập điểm các môn vào ô trống:</h4>
+    <table>
+        <tr>
+            <td>Điểm môn Vật lý</td>
+
+            <td><input type="number" id="number1"></td>
+        </tr>
+        <tr>
+            <td>Điểm môn Hóa học</td>
+            <td><input type="number" id="number2"></td>
+        </tr>
+        <tr>
+            <td>Điểm môn Sinh vật</td>
+            <td><input type="number" id="number3"></td>
+        </tr>
+        <tr>
+            <td><button type="button" onclick="TB()">Ấn đế tính điểm</button></td>
+        </tr>
+    </table>
+    <script>
+        function TB() {
+            var number1 = parseInt(document.getElementById("number1").value);
+            var number2 = parseInt(document.getElementById("number2").value);
+            var number3 = parseInt(document.getElementById("number3").value);
+            if (number1 > 10 || number2 > 10 || number3 > 10) {
+                alert("Bạn đã nhập sai số điểm");
+            } else {
+                var Tong = number1 + number2 + number3;
+                var DTB = Tong / 3;
+                alert("Tổng điểm 3 môn là: " + Tong + "\n"  + "Điểm trung bình 3 môn là: " + DTB);
+            }
+        }
+
+    </script>
+</head>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html><center>
+    <body>
+        <h3>XÉT HỌC LỰC CỦA HỌC SINH</h3><br>
+        Nhập số điểm của học sinh vào ô: <input type="number" id="number">
+        <button type="button" onclick="xeploai()">Ấn vô đây xem kết quả</button>
+        <script>
+            function xeploai(){
+                var number = document.getElementById("number").value;
+                if (number > 100){
+                    alert("Đã nhập không đúng số điểm (vì quá 100 điểm)");
+                } else {
+                    if (number >= 75){
+                        alert("Học sinh có học lực loại A");
+                    } else if (number >= 65) {
+                        alert("Học sinh có học lực loại B");
+                    } else if (number >= 45) {
+                        alert("Học sinh có học lực loại C");
+                    } else if (number >= 35) {
+                        alert("Học sinh có học lực loại D");
+                    } else {
+                        alert("Học sinh có học lực loại E");
+                    }
+                }
+            }
+        </script>
+    </body></center>
+</html>

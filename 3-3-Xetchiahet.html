@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<style>
+    .result{
+        width: 150px;
+    }
+</style>
+<html>
+    <head>
+        <h1>BT - Xét xem a có chia hết cho b không</h1>
+        <table>
+            <tr>
+                <td><b>Nhập vào giá trị của a</b></td>&nbsp;&nbsp; 
+                <td><input type="number" style="width: 40px;" id="a"></td>
+            </tr>
+            <tr>
+                <td><b>Nhập vào giá trị của b</b></td>&nbsp;&nbsp; 
+                <td><input type="number" style="width: 40px;" id="b"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="Resule" class="result" onclick="result()"></td>&nbsp;&nbsp; 
+                <td><input type="text" style="width: 200px;" id="result" disabled></td>
+            </tr>
+        </table>
+        <script>
+            function result(){
+                let a = parseInt(document.getElementById("a").value); 
+                let b = parseInt(document.getElementById("b").value); 
+                let t = a%b;
+                if (t==0) { 
+                    document.getElementById("result").value = "Vậy " + a + " chia hết cho " + b;
+                } else {
+                    document.getElementById("result").value = "Vậy " + a + " không chia hết cho " + b;
+                }
+            }
+        </script>
+    </head>
+</html>

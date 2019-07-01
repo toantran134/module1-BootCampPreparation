@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <table>
+            <tr>
+                <td></td>
+                <td><h3>BẢNG ĐỔI TIỀN TỆ</h3></td>
+            </tr>
+            <tr>
+                <td><center><b>Số độ cần đổi</b></center></td>
+                <td><center><b>Loại độ cần đổi</b></center></td>
+                <td><center><b>Số độ đổi được</b></center></td>
+                <td><center><b>Loại độ muốn đổi ra</b></center></td>
+            </tr>
+            <tr>
+                <td><input type="number" id="number"></td>
+                <td><center><select id="from">
+                        <option value="do1">Độ C</option>
+                        <option value="do2">Độ K</option>
+                        <option value="do3">Độ F</option>
+                      </select></center></td>
+                <td><input type="text" id="result"></td>
+                <td><center><select id="to">
+                        <option value="do1">Độ C</option>
+                        <option value="do2">Độ K</option>
+                        <option value="do3">Độ F</option>
+                      </select></center></td>
+                <td><button type="button" onclick="convert();">CONVERT</button></td>
+            </tr>
+        </table>
+        <script>
+            function convert(){
+                let from = document.getElementById("from").value;
+                let to = document.getElementById("to").value;   
+                let number = parseInt(document.getElementById("number").value);
+
+                let result;
+                if (from == "do1" && to == "do2"){
+                    result = number+273.15;
+                }
+                if (from == "do1" && to == "do3"){
+                    result = number*9/5+32;
+                }
+                if (from == "do2" && to == "do1"){
+                    result = number-273.15;
+                }
+                if (from == "do2" && to == "do3"){
+                    result = (number-273.15)*9/5+32;
+                }
+                if (from == "do3" && to == "do1"){
+                    result = (number-32)*5/9;
+                }
+                if (from == "do3" && to == "do2"){
+                    result = (number-32)*5/9+273.15;
+                }
+                if ((from == "do1" && to == "do1") || (from == "do2" && to == "do2") || (from == "do3" && to == "do3")){
+                    result = number*1;
+                }
+                document.getElementById("result").value = result;
+            }
+        
+        </script>
+               
+    </head>
+</html>

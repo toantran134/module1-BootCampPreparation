@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<style>
+    input {
+        font-size: 50px;
+    }
+    button {
+        font-size: 50px;
+        font-weight: bold;
+    }
+    .KT {
+        color: darkblue
+    }
+</style>
+<html style="font-size: 50px;">
+<body><center>
+    <h4>XÁC ĐỊNH LOẠI TAM GIÁC KHI BIẾT ĐỘ DÀI 3 CẠNH</h4>
+    <table>
+        <tr>
+            <td>Nhập độ dài cạnh thứ nhất</td>
+            <td><input type="text" style="width: 200px" id="sodo1"></td>
+        </tr> 
+        <tr>
+            <td>Nhập độ dài cạnh thứ nhất</td>
+            <td><input type="text" style="width: 200px" id="sodo2"></td>
+        </tr>
+        <tr>
+            <td>Nhập độ dài cạnh thứ nhất</td>
+            <td><input type="text" style="width: 200px" id="sodo3"></td>
+        </tr>
+        <tr>
+            <td><button class="KT" onclick="kiemtra()">Kiểm tra</button></td>
+            <td><input type="text" id="tamgiac" disabled></td>
+        </tr>
+    </table>
+    
+    <script>
+        function kiemtra() {
+            let a = parseFloat(document.getElementById("sodo1").value);
+            let b = parseFloat(document.getElementById("sodo2").value);
+            let c = parseFloat(document.getElementById("sodo3").value);
+            if ((a +b < c) || (a + c < b) || (b + c < a) ) {
+                document.getElementById("tamgiac").value = "Không phải là 1 tam giác";
+            }
+            else {
+                if (a == b && b == c) {
+                document.getElementById("tamgiac").value = "Đây là 1 tam giác đều";
+                } else if ((a == b && a!=c) || (a==c && a!=b) || (b==c && b!=a)) {
+                document.getElementById("tamgiac").value = "Đây là 1 tam giác cân";
+                } else if ((a*a==b*b+c*c) || (b*b==c*c+a*a) || (c*c==b*b+a*a)) {
+                document.getElementById("tamgiac").value = "Đây là 1 tam giác vuông";
+                }
+                else 
+                document.getElementById("tamgiac").value = "Đây là 1 tam giác thường";
+            }    
+        }
+    </script></center>
+</body>
+
+</html>
